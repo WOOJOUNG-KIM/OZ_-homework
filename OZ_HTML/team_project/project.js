@@ -193,7 +193,7 @@ const generatePrice = () => {
 };
 
 const product_data = [];
-for (let i = 0; i < 9824; i++) {
+for (let i = 0; i < 5000; i++) {
   const category = categories[Math.floor(Math.random() * categories.length)];
   const brand = brands[Math.floor(Math.random() * brands.length)];
   const product = products[Math.floor(Math.random() * products.length)];
