@@ -320,7 +320,8 @@ function filterProducts() {
   filteredProducts = product_data.filter(item => {
       const matchesCategory = selectedCategory ? item.category === selectedCategory : true;
       const matchesGender = selectedGender ? item.gender === selectedGender : true;
-      const matchesSearch = item.product.toLowerCase().includes(searchQuery);
+      const matchesSearch = item.product.toLowerCase().includes(searchQuery) ||
+                            item.brand.toLowerCase().includes(searchQuery); // 브랜드 와 재품 검색 가능
       return matchesCategory && matchesGender && matchesSearch;
   });
   currentPage = 1;
